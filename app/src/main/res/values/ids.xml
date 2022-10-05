@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="secondActivitySubmitButton" type="id" />
+    <item name="androidSeekBar" type="id" />
+    <item name="textView144" type="id" />
+    <item name="view3" type="id" />
+</resources>
