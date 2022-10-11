@@ -6,9 +6,6 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity3.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity3.*
-import java.util.*
 
 
 class ThirdActivity : AppCompatActivity() {
@@ -17,7 +14,6 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity3)
-
 
 
         val fullName = intent.getStringExtra("key_name")
@@ -35,29 +31,27 @@ class ThirdActivity : AppCompatActivity() {
 
 
 
-        finalFullName.setText("NAME: " + fullName)
-        finalFullName.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalAge.setText("Age: " + age)
-        finalAge.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalEmail.setText("Email: " +email)
-        finalEmail.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalGender.setText("Gender: " +gender)
-        finalGender.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalAndroid.setText("AndroidSkill: " +androidSeekBarValue)
-        finalAndroid.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalIos.setText("IosSkill: " + iosSeekBarValue)
-        finalIos.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalFlutter.setText("FlutterSkill: "+ flutterSeekBarValue)
-        finalFlutter.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalLanguages.setText("Languages: " + language)
-        finalLanguages.setTextColor(getResources().getColor(R.color.colorPrimary))
-        finalHobbies.setText("Hobbies: " + hobby)
-        finalHobbies.setTextColor(getResources().getColor(R.color.colorPrimary))
-
+        finalFullName.text = "NAME: " + fullName
+        finalFullName.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalAge.text = "Age: " + age
+        finalAge.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalEmail.text = "Email: " + email
+        finalEmail.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalGender.text = "Gender: " + gender
+        finalGender.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalAndroid.text = "AndroidSkill: " + androidSeekBarValue
+        finalAndroid.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalIos.text = "IosSkill: " + iosSeekBarValue
+        finalIos.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalFlutter.text = "FlutterSkill: " + flutterSeekBarValue
+        finalFlutter.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalLanguages.text = "Languages: " + language
+        finalLanguages.setTextColor(resources.getColor(R.color.colorPrimary))
+        finalHobbies.text = "Hobbies: " + hobby
+        finalHobbies.setTextColor(resources.getColor(R.color.colorPrimary))
 
 
     }
-
 
 
 }

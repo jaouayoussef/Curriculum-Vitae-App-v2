@@ -6,40 +6,37 @@ import android.os.Bundle
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity2.*
-import kotlinx.android.synthetic.main.activity2.*
 import kotlin.properties.Delegates
-
-
-private var androidSeekBarValue by Delegates.notNull<Int>();
-private var   iosSeekBarValue by Delegates.notNull<Int>();
-private var    flutterSeekBarValue by Delegates.notNull<Int>();
-val language = mutableListOf<String>()
-val hobby = mutableListOf<String>()
-
 
 
 class SecondActivity : AppCompatActivity() {
 
+    private var androidSeekBarValue by Delegates.notNull<Int>()
+    private var iosSeekBarValue by Delegates.notNull<Int>()
+    private var flutterSeekBarValue by Delegates.notNull<Int>()
+    val language = mutableListOf<String>()
+    val hobby = mutableListOf<String>()
 
-    private fun checklSelectedLanguage(){
-        if (arabicCheckBox.isChecked){
+    private fun checklSelectedLanguage() {
+        if (arabicCheckBox.isChecked) {
             language.add(arabicCheckBox.text.toString())
         }
-        if (frenchCheckBox.isChecked){
+        if (frenchCheckBox.isChecked) {
             language.add(frenchCheckBox.text.toString())
         }
-        if (englishCheckBox.isChecked){
+        if (englishCheckBox.isChecked) {
             language.add(englishCheckBox.text.toString())
         }
     }
-    private fun checkSelectedHobby(){
-        if (musicCheckBox.isChecked){
+
+    private fun checkSelectedHobby() {
+        if (musicCheckBox.isChecked) {
             hobby.add(musicCheckBox.text.toString())
         }
-        if (sportCheckBox.isChecked){
+        if (sportCheckBox.isChecked) {
             hobby.add(sportCheckBox.text.toString())
         }
-        if (gamesCheckBox.isChecked){
+        if (gamesCheckBox.isChecked) {
             hobby.add(gamesCheckBox.text.toString())
         }
     }
@@ -73,20 +70,20 @@ class SecondActivity : AppCompatActivity() {
 
 
 
-            androidSeekBarValue=androidSeekBar.progress*10;
-            iosSeekBarValue=iosSeekBar.progress*10;
-            flutterSeekBarValue=flutterSeekBar.progress*10;
+            androidSeekBarValue = androidSeekBar.progress * 10
+            iosSeekBarValue = iosSeekBar.progress * 10
+            flutterSeekBarValue = flutterSeekBar.progress * 10
             val i = Intent(this, ThirdActivity::class.java)
-            i.putExtra("key_name", fullName.toString());
-            i.putExtra("key_age", age.toString());
-            i.putExtra("key_email", email.toString());
-            i.putExtra("key_gender", gender.toString());
-            i.putExtra("key_android_seekbar", androidSeekBarValue.toString());
-            i.putExtra("key_ios_seekbar", iosSeekBar.progress.toString());
-            i.putExtra("key_flutter_seekbar", flutterSeekBar.progress.toString());
-            i.putExtra("key_language", selectedLanguage);
-            i.putExtra("key_hobby",selectedHobby);
-            i.putExtra("key_profile_picture",byteArray);
+            i.putExtra("key_name", fullName.toString())
+            i.putExtra("key_age", age.toString())
+            i.putExtra("key_email", email.toString())
+            i.putExtra("key_gender", gender.toString())
+            i.putExtra("key_android_seekbar", androidSeekBarValue.toString())
+            i.putExtra("key_ios_seekbar", iosSeekBar.progress.toString())
+            i.putExtra("key_flutter_seekbar", flutterSeekBar.progress.toString())
+            i.putExtra("key_language", selectedLanguage)
+            i.putExtra("key_hobby", selectedHobby)
+            i.putExtra("key_profile_picture", byteArray)
 
             startActivity(i)
 
@@ -120,8 +117,8 @@ class SecondActivity : AppCompatActivity() {
         })
 
 
-
     }
+
     private fun progress() {
         if (androidSeekBar.progress > 8 && androidSeekBar.progress > iosSeekBar.progress && androidSeekBar.progress > flutterSeekBar.progress) {
             Toast("Your excellent at android ")
@@ -142,11 +139,10 @@ class SecondActivity : AppCompatActivity() {
 
     private fun Toast(message: String) {
 
-        android.widget.Toast.makeText(this,message, android.widget.Toast.LENGTH_SHORT).show()
+        android.widget.Toast.makeText(this, message, android.widget.Toast.LENGTH_SHORT).show()
 
 
     }
-
 
 
 }
